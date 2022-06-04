@@ -122,13 +122,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATICFILES_DIR=[
-   BASE_DIR / 'producthunt/static/'
+STATICFILES_DIRS=[
+    BASE_DIR / 'producthunt/static/'
+
 ]
+
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
+# MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = '/media/'
 
-# Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
+print(BASE_DIR)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

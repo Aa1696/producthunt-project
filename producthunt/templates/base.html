@@ -1,5 +1,5 @@
 <!doctype html>
-{% load static %}
+
 <html lang="en">
 
   <head>
@@ -90,17 +90,18 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
+    {% load static %}
     <div class="container">
     <a class="navbar-brand" href="">
-      <img src="{% static 'logo.png'%}" height=30 width= 30 class="d-inline-block align-top" />
+      <img src="{% static 'logo.png'%}" height=50 width= 50 class="d-inline-block align-top" />
       Product Hunt</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="">Sign Up</a>
-        <a class="nav-link" href="#">Sign In</a>
+        <a class="nav-link" height=50 width= 50 href="">Sign Up</a>
+        <a class="nav-link" height=50 width= 50 href="#">Sign In</a>
       </div>
     </div>
       </div>
