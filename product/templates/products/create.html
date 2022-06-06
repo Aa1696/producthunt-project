@@ -1,0 +1,40 @@
+<!doctype html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% block content%}
+{% if error%}
+{{error}}
+{% endif %}
+<h1>Create!!!!</h1>
+<form class="mx-1 mx-md-4" action="{% url 'create'%}" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    Title:
+    <br>
+    <input type="text" id="form3Example1c" class="form-control" name="title" /><br>
+    Body:
+    <br>
+    <input type="text" id="form3Example4c" class="form-control" name="body" /><br>
+    URL:
+    <br>
+    <input type="text" id="form3Example2c" class="form-control" name="url" /><br>
+    icon:
+    <br>
+    <input type="file" id="form3Example3c" class="form-control" name="icon" /><br>
+
+    Image:
+    <br>
+    <input type="file" id="form3Example5c" class="form-control" name="image" /><br>
+    <input class="btn btn-primary" type="submit"  value="Load Products">
+</form>
+{% endblock %}
+
+</body>
+</html>
