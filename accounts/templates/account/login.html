@@ -1,4 +1,26 @@
+<!doctype html>
 {% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 {% block content%}
-<h1>Log In</h1>
+{% if error%}
+{{error}}
+{% endif %}
+<h1>Log In!!!!</h1>
+<form class="mx-1 mx-md-4" action="{% url 'login'%}" method="POST">
+    {% csrf_token %}
+    <input type="text" id="form3Example1c" class="form-control" name="username" />
+    <input type="password" id="form3Example4c" class="form-control" name="psswd" />
+    <input type="submit" value="login">
+</form>
 {% endblock %}
+
+</body>
+</html>
